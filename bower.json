@@ -1,0 +1,14 @@
+{
+  "name": "adapt-contrib-core",
+  "version": "3.0.0",
+  "framework": ">=2.0.11",
+  "core" : "core",
+  "main": "/js/app.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-core"
+  ],
+  "license": "GPLv3",
+  "dependencies": {
+  }
+}
