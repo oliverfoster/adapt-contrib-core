@@ -11,14 +11,15 @@ define([
 
             this.url = options.url;
 
-            this.on('sync', this.loadedData, this);
-            if (this.url) {
-                this.fetch({
-                    error: _.bind(function(model, xhr, options) {
-                        console.error("ERROR: unable to load file " + this.url);
-                    }, this)
-                });
-            }
+            this.loadData();
+        },
+
+        loadData: function() {
+            var data = Adapt.dataLoader.findByFile(this.url)[0];
+            this.set(data);
+            _.defer(function() {
+                this.loadedData();
+            }.bind(this));
         },
 
         loadedData: function() {
