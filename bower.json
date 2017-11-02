@@ -1,6 +1,6 @@
 {
   "name": "adapt-contrib-core",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "framework": ">=2.0.11",
   "core" : "core",
   "main": "/js/app.js",
